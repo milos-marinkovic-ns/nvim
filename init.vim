@@ -35,8 +35,8 @@ let g:iceberg_dimmer_comments = 3
 " Nerd tree configuration
 nnoremap <leader>wt <cmd>NERDTreeToggle<CR>
 let g:NERDTreeShowHidden=1
-let g:NERDTreeDirArrowExpandable='🚀'
-let g:NERDTreeDirArrowCollapsible='💡'
+let g:NERDTreeDirArrowExpandable='🗻'
+let g:NERDTreeDirArrowCollapsible='🗽'
 
 "Telescope configuration
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -45,9 +45,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>:p
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Coc configuration
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
+inoremap <silent><expr> <TAB> pumvisible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
 
 " Lua configuration for autoclose
 lua << EOF
