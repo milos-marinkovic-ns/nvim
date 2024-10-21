@@ -17,8 +17,12 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'm4xshen/autoclose.nvim'
+Plug 'luochen1990/rainbow'
 
 call plug#end()
+
+let g:rainbow_active = 1
 
 let mapleader = ","
 
@@ -44,3 +48,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+
+" Lua configuration for autoclose
+lua << EOF
+require('autoclose').setup()
+EOF
