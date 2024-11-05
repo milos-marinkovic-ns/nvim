@@ -26,18 +26,20 @@ let g:rainbow_active = 1
 
 let mapleader = ","
 
-" Colorsheme configuration
+"Colorsheme configuration
 colorscheme iceberg
 let g:iceberg_contrast_dark = 1
 let g:iceberg_transparent = 2
 let g:iceberg_dimmer_comments = 3
 
+
 " Nerd tree configuration
 nnoremap <leader>wt <cmd>NERDTreeToggle<CR>
-let g:NERDTreeShowHidden=1
-let g:NERDTreeDirArrowExpandable='🗻'
-let g:NERDTreeDirArrowCollapsible='🗽'
+nnoremap <leader>r :NERDTreeRefreshRoot<CR>
 
+let g:NERDTreeShowHidden=1
+let g:NERDTreeDirArrowExpandable='📪'
+let g:NERDTreeDirArrowCollapsible='📬'
 "Telescope configuration
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
